@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<?php zp_apply_filter('theme_head'); ?>
-		<title><?php echo getBareGalleryTitle(); ?> | <?php echo getBareAlbumTitle();?></title>
+		<title><?php echo getBareGalleryTitle(); ?> | Recent Uploads</title>
 		<meta http-equiv="content-type" content="text/html; charset=<?php echo getOption('charset'); ?>" />
 		<link rel="stylesheet" href="/themes/modelrail/styles/dark.css" type="text/css" />
 		<?php printRSSHeaderLink('Gallery',gettext('Gallery RSS')); ?>
@@ -15,7 +15,7 @@
 	<div id="main">
 	
 		<div id="gallerytitle">
-			<h2><span><?php printHomeLink('', ' | '); ?><a href="<?php echo html_encode(getGalleryIndexURL());?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo getGalleryTitle();?></a> | </span>Photostream</h2>
+			<h2><span><?php printHomeLink('', ' | '); ?><a href="<?php echo html_encode(getGalleryIndexURL());?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo getGalleryTitle();?></a> | </span>Recent Uploads</h2>
 		</div>
 	
 			<div id="padbox">
