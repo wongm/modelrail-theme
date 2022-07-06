@@ -21,15 +21,19 @@
 			<div id="padbox">
 			
 				<?php echo getNumberCurrentDisplayedRecords("Displaying images ", ""); ?>
-	
+
 				<div id="images">
 				<?php while (next_photostream_image()): ?>
-				<div class="image">
-					<div class="imagethumb"><a href="<?php echo html_encode(getImageURL());?>" title="<?php printBareImageTitle();?>"><?php printImageThumb(getAnnotatedImageTitle()); ?></a>
-					<p><?php echo getAnnotatedImageTitle(); ?></p></div>
-				</div>
+					<div class="image">
+						<div class="imagethumb">
+							<a href="<?php echo html_encode(getImageURL());?>" title="<?php printBareImageTitle();?>"><?php printImageThumb(getAnnotatedImageTitle()); ?></a>
+						</div>
+						<p><?php echo getAnnotatedImageTitle(); ?></p>
+						<small><?php printImageDate(); ?>
+						<p>In album: <a href="<?php echo getAlbumURL($_zp_current_image->getAlbum()); ?>"><?php echo getAlbumTitleForPhotostreamImage(); ?></a></p>
+						</small><br>
+					</div>
 				<?php endwhile; ?>
-	
 			</div>
 	
 			<?php printPhotostreamPageListWithNav("« " . gettext("prev"), gettext("next") . " »"); ?>
