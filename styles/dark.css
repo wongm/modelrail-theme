@@ -250,11 +250,15 @@ ul.pagelist li.next {
 .image {
 	vertical-align: top;
 	text-align:center;
-	width: 50%;
 }
 #images {
 	width: 100%;
 	padding-top: 15px;
+}
+
+div#images {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 /* Album Thumbnails
